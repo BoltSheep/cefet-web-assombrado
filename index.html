@@ -8,10 +8,10 @@
     <link rel="shortcut icon" href="imgs/favicon.png">
   </head>
   <body>
-    <div id="cabecalho">
+    <header id="cabecalho">
       <h1>Blog Assombrado</h1>
       <h2>Notícias e reportagens sobre o desconhecido</h2>
-      <div id="menu-de-navegacao">
+      <nav id="menu-de-navegacao">
         <ul>
           <li><a href="index.html">Inicial</a></li>
           <li><a href="#ovnis.html">UFOlogia</a></li>
@@ -20,16 +20,16 @@
           <li><a href="#lugares-misteriosos.html">Lugares Misteriosos</a></li>
           <li><a href="#especiais.html">Especiais</a></li>
         </ul>
-      </div>
-    </div>
+      </nav>
+    </header>
 
     <!-- OBS: não remova a class="desaparecido" porque ela está sendo usada pra
          esconder este elemento até o vídeo acabar (tem uma regra CSS para
          ocultar quem tem .desaparecido)-->
-    <div id="conteudo-principal" class="desaparecido">
+    <main id="conteudo-principal" class="desaparecido">
       <!-- opa, <section> já é um elemento semântico. Dica: podemos
            dividir a página em 3 seções, e esta é uma delas -->
-      <div id="tags">
+      <nav id="tags">
         <h1>Nuvem de <em>tags</em></h1>
         <span class="tag-3">UFO</span>
         <span class="tag-1">OVNI</span>
@@ -38,7 +38,7 @@
         <span class="tag-2">Assombrações</span>
         <span class="tag-3">Local mal-assombrado</span>
         <span class="tag-1">Saci</span>
-      </div>
+      </nav>
 
       <div id="posts-principais">
         <h1>Principais Postagens</h1>
@@ -65,40 +65,41 @@
         <!-- class="palavra1 palavra2" quer dizer que o elemento possui DUAS
              CLASSES. Portanto, uma regra CSS .palavra1 seleciona ele, bem
              como uma .palavra2 -->
-        <div class="post novidade">
+        <article class="post novidade"> 
           <span class="data-horario" datetime="2021-05-09">09/05/2021</span>
           <h2 class="titulo">
             O Projeto Manhatan e a Construção das
             Primeiras Bombas Atômicas
           </h2>
-        </div>
-        <div class="post novidade">
+        </article>
+        <article class="post novidade"> 
           <span class="data-horario" datetime="2021-05-09">09/05/2021</span>
           <h2 class="titulo">
             A Misteriosa "Vulture Stone": Um "Pilar de
             Pedra" Provocou um Verdadeiro Caos na
             Terra Há 13 Mil Anos?
           </h2>
-        </div>
-        <div class="post">
+        </article>
+        <article class="post">
           <span class="data-horario" datetime="2021-05-08">08/05/2021</span>
           <h2 class="titulo">
             O "Fantasma de um Homem" Subindo uma Escadaria
             Apareceu em uma Mansão "Mal-Assombrada" do Século XVII, na
             Inglaterra?
           </h2>
-        </div>
-        <div class="post">
+        </article>
+        <article class="post">
           <span class="data-horario" datetime="2021-04-16">16/04/2021</span>
           <h2 class="titulo">
             Sereias: Lenda, Fotos, Vídeos, Relatos e
             Análises. Será que elas existem?
           </h2>
-        </div>
+        </article>
       </div>
-    </div>
+      <img id="ghost-mario" src="imgs/boo3.gif" alt="Fantasma do mario">
+    </main>
 
-    <div id="rodape">
+    <footer id="rodape">
       <img class="logo-rodape" src="imgs/logo-assombrado.png" alt="Logo do canal do Youtube Assombrado composto por uma letra A dentro de um círculo e os dizeres 'O desconhecido levado a sério'">
       <div>
         <p class="texto-rodape">
@@ -108,9 +109,24 @@
           <a href="http://assombrado.com.br" target="_blank">AssombradO.com.br</a>
         </p>
         <div id="inscreva-se">
+          <h3>
+            Inscreva-se!
+          </h3>
+          <div id="formulario">
+            <label>E-MAIL:
+              <input id="email-input" type="email">
+            </label>
+            <label>NOME:
+              <input id="nome-input" type="text">
+            </label>
+            <label>
+              <input id="emails" type="checkbox" value="sim"> Aceito receber promoções
+            </label>
+            <button id="enviar">Enviar</button>
+          </div>  
         </div>
       </div>
-    </div>
+    </footer>
 
     <!-- não remova a class="backdrop" porque ela está sendo usada para
          estilizar este elemento no CSS e usada também no JavaScript para ocultar
@@ -122,7 +138,7 @@
 
     <script>
       // faz o vídeo desaparecer de leve assim que terminar
-      const TEMPO = 11000;  // 11s, duração do vídeo
+      const TEMPO = 5000;  // 11s, duração do vídeo
       setTimeout(() => {
         // faz o vídeo desaparecer colocando a classe .desaparecido
         document.querySelector('.backdrop').classList.add('desaparecido');

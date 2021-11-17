@@ -60,6 +60,15 @@ a:active {
 
 #menu-de-navegacao ul {
   margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+#menu-de-navegacao li{
+  padding-inline: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 
@@ -133,6 +142,26 @@ a:active {
   display: inline-block;
 }
 
+#formulario {
+  display: flex;
+  justify-content: flex-start;
+}
+
+#formulario label {
+  margin: 10px;
+}
+
+#ghost-mario {
+  position: relative;
+  top: 15px; left: 700px;
+  transform: scale(0.5);
+  opacity: 0.2;
+}
+
+#ghost-mario:hover{
+  opacity: 1;
+}
+
 
 
 
@@ -140,13 +169,20 @@ a:active {
 #tags {
   float: right;
   width: 300px;
-  padding: 15px;
+  margin: 15px;
   background-color: black;
   background-image: url(imgs/mula.webp);
   background-repeat: no-repeat;
   background-size: 300px;
   box-shadow: -4px 0 10px rgba(0, 0, 0, 0.5);
   text-align: center;
+  position: sticky;
+  top: 10px;
+}
+
+#tags span:active{
+  transform: translateX(-2px);
+  transform: translateY(-2px);
 }
 
 #tags h1 {
@@ -218,6 +254,15 @@ a:active {
 
 .backdrop.desaparecido + #unmute {
   display: none;
+}
+
+.novidade::before {
+  content: "Novidade!";
+  border: 5px;
+  padding: 4px;
+  margin: 2px;
+  background-color:black;
+  border-radius: 5px;
 }
 
 #unmute {
